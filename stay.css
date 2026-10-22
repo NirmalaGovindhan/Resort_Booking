@@ -1,0 +1,23 @@
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.logo3 img{
+
+    width: 100px;
+    height: 60px;
+    margin-right: 0%;
+    object-fit: contain;
+    display: block;
+
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}

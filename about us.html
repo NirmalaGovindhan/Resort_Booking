@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - YN Peace of Stay | Best Resorts in Yercaud</title>
+  <link rel="stylesheet" type="text/css" href="ht.css">
+  <link rel="stylesheet" href="resort.css">
+  <script src="https://kit.fontawesome.com/873fc09bf4.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f9fa;
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+
+    /* Top Navigation bar */
+    nav {
+      background-color: #1e3c72;
+      padding: 15px 40px;
+      display: flex ;
+      justify-content: flex-end;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      position: relative;
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      list-style: none;
+      margin: 0 ;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #e5a34b;
+      color: #ffffff;
+    }
+
+    .nav-logo {
+      position: absolute;
+      left: 30px;
+      top: 10px;
+      height: 50px;
+      object-fit: contain;
+    }
+
+    /* Hero Banner */
+    .about-hero {
+      background: linear-gradient(135deg, rgba(30, 60, 114, 0.95), rgba(42, 82, 152, 0.95));
+      color: white;
+      text-align: center;
+      padding: 60px 20px 50px 20px;
+    }
+
+    .about-hero h1 {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #ffffff ;
+      text-align: center ;
+      letter-spacing: 0.5px;
+    }
+
+    .about-hero p {
+      font-size: 18px;
+      max-width: 750px;
+      margin: 0 auto 20px auto;
+      color: #e3ebf6;
+      font-weight: 300;
+    }
+
+    .about-badges {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .badge-item {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(5px);
+      padding: 8px 18px;
+      border-radius: 25px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    /* Resorts Container */
+    .resorts-section {
+      max-width: 1050px;
+      margin: 45px auto 60px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 32px;
+      color: #1a2a44;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      font-size: 16px;
+      color: #66788a;
+    }
+
+    /* Pure Resort Detail Cards - NO IMAGES */
+    .resort-detail-card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 35px 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+      border: 1px solid #e2e8f0;
+      border-left: 6px solid #e5a34b;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .resort-detail-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+      border-left-color: #1e3c72;
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tagline {
+      display: inline-block;
+      color: #e5a34b;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      margin-bottom: 5px;
+    }
+
+    .resort-detail-card h3 {
+      font-size: 26px;
+      color: #1a2a44;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .rating-badge {
+      background: #fef9e7;
+      color: #d68910;
+      border: 1px solid #f9e79f;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .desc {
+      font-size: 15.5px;
+      color: #4a5568;
+      line-height: 1.7;
+      margin: 15px 0 20px 0;
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px 18px;
+      margin-bottom: 25px;
+      padding: 16px 20px;
+      background: #f8fafc;
+      border-radius: 12px;
+    }
+
+    .highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: #2d3748;
+      font-weight: 500;
+    }
+
+    .highlight-item i {
+      color: #27ae60;
+      font-size: 15px;
+    }
+
+    .card-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 18px;
+      border-top: 1px solid #edf2f7;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .price-box span {
+      font-size: 13px;
+      color: #718096;
+      text-transform: uppercase;
+      display: block;
+    }
+
+    .price-box strong {
+      font-size: 22px;
+      color: #d9534f;
+      font-weight: 700;
+    }
+
+    .btn-view {
+      background-color: #1e3c72;
+      color: white;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-view:hover {
+      background-color: #e5a34b;
+      transform: translateY(-2px);
+    }
+
+    /* Contact Banner */
+    .contact-banner {
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      color: white;
+      border-radius: 18px;
+      padding: 45px 40px;
+      margin: 50px auto 40px auto;
+      max-width: 1050px;
+      box-shadow: 0 15px 35px rgba(30, 60, 114, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .contact-info h2 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .contact-info p {
+      font-size: 16px;
+      color: #dbe4ef;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-actions {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn-phone {
+      background-color: #27ae60;
+      color: white;
+      padding: 13px 26px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn-phone:hover {
+      background-color: #219150;
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      background-color: #25d366;
+      color: white;
+      padding: 13px 26px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #1ebd5a;
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    footer.main-footer {
+      background-color: #111a28;
+      color: #b0bac9;
+      padding: 45px 20px 25px 20px;
+      text-align: center;
+    }
+
+    .footer-brand {
+      font-size: 26px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .footer-address {
+      font-size: 15px;
+      color: #9aa8bd;
+      margin-bottom: 15px;
+    }
+
+    .footer-phone {
+      font-size: 17px;
+      color: #e5a34b;
+      font-weight: 600;
+      margin-bottom: 22px;
+    }
+
+    .footer-phone a {
+      color: #e5a34b;
+      text-decoration: none;
+    }
+
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 25px;
+    }
+
+    .footer-social a,
+    .footer-social .social-no-click {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      font-size: 18px;
+      text-decoration: none;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .footer-social a:hover,
+    .footer-social .social-no-click:hover {
+      background-color: #e5a34b;
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 20px;
+      font-size: 13px;
+      color: #718096;
+    }
+
+    @media (max-width: 768px) {
+      .resort-detail-card {
+        padding: 25px 20px;
+      }
+
+      .contact-banner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .contact-info p {
+        justify-content: center;
+      }
+
+      .contact-actions {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="ht.html">
+      <img src="y logo.png" class="nav-logo" alt="YN Peace of Stay Logo">
+    </a>
+    <ul>
+      <li><a href="ht.html" class="home-btn"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+      <li><a href="resort.html">RESORT</a></li>
+      <li><a href="about us.html" class="active">ABOUT US</a></li>
+      <li><a href="reviews.html">REVIEWS</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Header -->
+  <header class="about-hero">
+    <h1>About YN Peace of Stay</h1>
+    <p>
+      Your trusted destination for discovering, exploring, and reserving the most picturesque 
+      and peaceful luxury resorts in Yercaud, Salem. We connect you with memorable hill station stays 
+      at guaranteed best prices.
+    </p>
+    <div class="about-badges">
+      <div class="badge-item"><i class="fa fa-check-circle"></i> 5 Handpicked Luxury Resorts</div>
+      <div class="badge-item"><i class="fa fa-tag"></i> Best Price Guarantee</div>
+      <div class="badge-item"><i class="fa fa-phone"></i> 24/7 Booking Support: 9363372360</div>
+      <div class="badge-item"><i class="fa fa-map-marker-alt"></i> Yercaud, Salem</div>
+    </div>
+  </header>
+
+  <!-- Resorts Section: ONLY RESORT DETAILS (NO IMAGES) -->
+  <main class="resorts-section">
+    <div class="section-title">
+      <h2>Our 5 Premier Resorts in Yercaud</h2>
+      <p>Explore complete resort details, amenities, and price tariffs.</p>
+    </div>
+
+    <!-- Resort 1: Tipperary Estate Stay -->
+    <article class="resort-detail-card">
+      <div class="card-top">
+        <div>
+          <span class="tagline">Heritage Coffee Plantation</span>
+          <h3>1. Tipperary Estate Stay</h3>
+        </div>
+        <div class="rating-badge">⭐ 4.5 / 5</div>
+      </div>
+      <p class="desc">
+        Perched on the highest ridges of Yercaud, Tipperary Estate Stay is an authentic colonial heritage 
+        bungalow surrounded by aromatic coffee, orange, and pepper plantations. Perfect for travelers seeking 
+        peace, morning mountain mist, and vintage Victorian elegance. Enjoy plantation walks, crisp mountain air, 
+        and panoramic viewpoints across the valley.
+      </p>
+      <div class="highlight-grid">
+        <div class="highlight-item"><i class="fa fa-coffee"></i> Organic Coffee Plantation Walk</div>
+        <div class="highlight-item"><i class="fa fa-mountain"></i> Panoramic Valley & Sunrise Views</div>
+        <div class="highlight-item"><i class="fa fa-home"></i> Heritage Colonial Cottages</div>
+        <div class="highlight-item"><i class="fa fa-spa"></i> Rejuvenating Ayurvedic Spa</div>
+      </div>
+      <div class="card-bottom">
+        <div class="price-box">
+          <span>Starting Price</span>
+          <strong>₹ 3500 / night</strong>
+        </div>
+        <a href="stay.html" class="btn-view">View Resort Page <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <!-- Resort 2: Wow Bison Woods Organic Veg Resort -->
+    <article class="resort-detail-card">
+      <div class="card-top">
+        <div>
+          <span class="tagline">Eco-Luxury & Organic Living</span>
+          <h3>2. Wow Bison Woods Organic Veg Resort</h3>
+        </div>
+        <div class="rating-badge">⭐ 4.5 / 5</div>
+      </div>
+      <p class="desc">
+        Nestled amidst tranquil forests near Peeku Park, Wow Bison Woods combines responsible eco-tourism 
+        with luxury comfort. Renowned for its 100% pure vegetarian organic multi-cuisine dining crafted with fresh 
+        garden-grown ingredients. Features private wooden cottages, luxury tent stays, outdoor bonfires, and complete 
+        harmony with nature.
+      </p>
+      <div class="highlight-grid">
+        <div class="highlight-item"><i class="fa fa-leaf"></i> 100% Pure Veg Organic Restaurant</div>
+        <div class="highlight-item"><i class="fa fa-campground"></i> Luxury Cottages & Tents</div>
+        <div class="highlight-item"><i class="fa fa-fire"></i> Campfire with Evening Music</div>
+        <div class="highlight-item"><i class="fa fa-heart"></i> Bliss Wellness & Ayurvedic Spa</div>
+      </div>
+      <div class="card-bottom">
+        <div class="price-box">
+          <span>Starting Price</span>
+          <strong>₹ 2900 / night</strong>
+        </div>
+        <a href="wow bison resorts .html" class="btn-view">View Resort Page <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <!-- Resort 3: Sunrays Inn Resort -->
+    <article class="resort-detail-card">
+      <div class="card-top">
+        <div>
+          <span class="tagline">Scenic Gardens & Family Comfort</span>
+          <h3>3. Sunrays Inn Resort</h3>
+        </div>
+        <div class="rating-badge">⭐ 4.5 / 5</div>
+      </div>
+      <p class="desc">
+        Situated in a picturesque landscape surrounded by fragrant flower gardens and tea slopes, Sunrays Inn Resort 
+        is an ideal getaway for families and couples. Wake up to golden sunrise rays, take a dip in the sparkling 
+        outdoor swimming pool, and relax in spacious rooms designed with modern conveniences.
+      </p>
+      <div class="highlight-grid">
+        <div class="highlight-item"><i class="fa fa-sun"></i> Stunning Sunrise View Point</div>
+        <div class="highlight-item"><i class="fa fa-swimming-pool"></i> Clean Outdoor Swimming Pool</div>
+        <div class="highlight-item"><i class="fa fa-tree"></i> Landscaped Botanical Gardens</div>
+        <div class="highlight-item"><i class="fa fa-utensils"></i> Multi-Cuisine Family Restaurant</div>
+      </div>
+      <div class="card-bottom">
+        <div class="price-box">
+          <span>Starting Price</span>
+          <strong>₹ 3500 / night</strong>
+        </div>
+        <a href="sunrays inn resort.html" class="btn-view">View Resort Page <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <!-- Resort 4: Sterling Resort -->
+    <article class="resort-detail-card">
+      <div class="card-top">
+        <div>
+          <span class="tagline">Hillside Luxury & Infinity Pool</span>
+          <h3>4. Sterling Resort</h3>
+        </div>
+        <div class="rating-badge">⭐ 4.5 / 5</div>
+      </div>
+      <p class="desc">
+        An architectural marvel of Yercaud, Sterling Resort is built into the terraced slopes of the Shevaroy Hills. 
+        Offers cliff-edge infinity swimming, holistic wellness therapies at Sterling Spa, multi-cuisine gourmet dining, 
+        and lavish banquet facilities for celebrations and destination weddings.
+      </p>
+      <div class="highlight-grid">
+        <div class="highlight-item"><i class="fa fa-water"></i> Cliffside Infinity Swimming Pool</div>
+        <div class="highlight-item"><i class="fa fa-concierge-bell"></i> Hilltop Gourmet Dining</div>
+        <div class="highlight-item"><i class="fa fa-spa"></i> Holistic Wellness & Massage Spa</div>
+        <div class="highlight-item"><i class="fa fa-glass-cheers"></i> Grand Banquet & Event Spaces</div>
+      </div>
+      <div class="card-bottom">
+        <div class="price-box">
+          <span>Starting Price</span>
+          <strong>₹ 4000 / night</strong>
+        </div>
+        <a href="sterling resort.html" class="btn-view">View Resort Page <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <!-- Resort 5: Grand Palace Resort -->
+    <article class="resort-detail-card">
+      <div class="card-top">
+        <div>
+          <span class="tagline">Royal Luxury & Lake Vistas</span>
+          <h3>5. Grand Palace Resort</h3>
+        </div>
+        <div class="rating-badge">⭐ 4.5 / 5</div>
+      </div>
+      <p class="desc">
+        Perched high above Yercaud Lake with sweeping views of the misty valleys, Grand Palace Resort redefines 
+        hillside royal hospitality. Features palatial luxury suites, a scenic outdoor swimming pool, royal dining 
+        at The Royal Feast restaurant, and authentic wellness therapies for an extraordinary stay.
+      </p>
+      <div class="highlight-grid">
+        <div class="highlight-item"><i class="fa fa-crown"></i> Royal Lake & Mountain View</div>
+        <div class="highlight-item"><i class="fa fa-swimmer"></i> Scenic Outdoor Swimming Pool</div>
+        <div class="highlight-item"><i class="fa fa-utensils"></i> The Royal Feast Fine Dining</div>
+        <div class="highlight-item"><i class="fa fa-landmark"></i> Palatial Banquet & Event Halls</div>
+      </div>
+      <div class="card-bottom">
+        <div class="price-box">
+          <span>Starting Price</span>
+          <strong>₹ 3500 / night</strong>
+        </div>
+        <a href="grand palace resort.html" class="btn-view">View Resort Page <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <!-- Contact & Booking Support Banner -->
+    <section class="contact-banner">
+      <div class="contact-info">
+        <h2>YN Peace of Stay</h2>
+        <p><i class="fa fa-map-marker-alt"></i> Address: Yercaud, Salem, Tamil Nadu, India</p>
+        <p><i class="fa fa-phone-alt"></i> Booking Helpline: <strong>9363372360</strong></p>
+        <p><i class="fa fa-clock"></i> 24 Hours Customer Assistance for All 5 Resorts</p>
+      </div>
+      <div class="contact-actions">
+        <button type="button" class="btn-phone">
+          <i class="fa fa-phone"></i> Call 9363372360
+        </button>
+        <button type="button" class="btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-brand">YN Peace of Stay</div>
+    <div class="footer-address">
+      <i class="fa fa-map-marker-alt"></i> Yercaud, Salem, Tamil Nadu, India
+    </div>
+    <div class="footer-phone">
+      <i class="fa fa-phone-alt"></i> Contact: <span>9363372360</span>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.youtube.com/results?search_query=yercaud+resorts" target="_blank" title="YouTube">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+      <span class="social-no-click" title="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </span>
+      <a href="https://www.google.com/maps/search/yercaud++resorts" target="_blank" title="Google Maps">
+        <i class="fa-brands fa-google"></i>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 YN Peace of Stay. All Rights Reserved. Yercaud, Salem.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

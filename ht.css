@@ -1,0 +1,106 @@
+ 
+ 
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;}
+body{
+       font-family: "Arial",sans-serif;
+       color:rgb(8, 9, 8);}
+nav,h1,ul,li{
+    display: inline-block;
+}
+ul{
+    margin-left:700px;
+    background-color:none;
+    color: rgb(189, 13, 13);
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+
+}
+.p{
+    background-color: rgb(242, 240, 255);
+    color: blue;
+}
+.body{
+
+    background-image: url("myst-yellow-lakes-resorts-spa-yercaud.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+nav h1{
+    font-family: Georgia, serif;
+    font-size: 50px;
+}
+nav ul li {
+   background-color:none;
+}
+.hero{
+    min-height:600px;
+    background-image: 
+    linear-gradient(rgba(136, 7, 108, 0.35)
+          rgba(0, 0, 0, 0.35)),
+          url("myst-yellow-lakes-resorts-spa-yercaud.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.hero-content {
+    position: absolute;
+    top: 30%;
+    left: 6%;
+}
+.hero-content h2{
+    font-size: 60px;
+    line-height: 1.0;
+    margin-bottom: 30px;
+    color:aqua;
+}
+.hero-content p{
+     font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+.hero-content p{
+    color:rgb(253, 253, 253);
+    font-size:90px;
+    width:80%;}
+nav {
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+}
+   nav ul{
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;}
+  .hero-content h2{
+    font-size: 60px;
+    margin-left: 80px;
+}
+   .hero-content p{
+    font-size: 25px;
+ }
+ .logo{
+    width: 120px;
+    height: 100px;
+    object-fit: contain;
+    position: absolute;
+    top: 25px;
+    left:25px;}
+nav a{
+    color: rgb(248, 245, 245);
+    text-decoration: none;
+    font-size: 20px;
+    }
+nav li:first-child a{
+    font-size: 30px;
+}
+    
